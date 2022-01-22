@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@200;400;600&family=Roboto+Slab:wght@200;400;600&display=swap');
+
+
+
+*{
+    padding:0px;
+    margin: 0px;
+}
+body{
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    background-color: #f0f0f0;
+    padding-bottom: 50px;
+}
+#title{
+    text-align: center;
+    margin-top: 70px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.wrap-ques{
+    padding: 30px;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    width: 550px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.ques-img-left,
+.ques-img-right{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.ques-img-left svg,
+.ques-img-right svg{
+    width: 100%;
+    height: 100%;
+}
+.ques-img-left{
+    top: 0px;
+    left: -30px;
+    transform: rotateY(180deg);
+    color: #3498db;
+    opacity: 0.2;
+}
+.ques-img-right{
+    top: 20px;
+    color: #2ecc71;
+    opacity: 0.2;
+}
+#close1,
+#close2,
+#close3,
+#close4,
+#close5,
+#open1,
+#open2,
+#open3,
+#open4,
+#open5{
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #fff;
+    z-index: 10;
+}
+#close-input1:checked ~ #close1,
+#close-input2:checked ~ #close2,
+#close-input3:checked ~ #close3,
+#close-input4:checked ~ #close4,
+#close-input5:checked ~ #close5{
+    z-index: -1 !important;
+}
+
+#open-input1:checked ~ #open1,
+#open-input2:checked ~ #open2,
+#open-input3:checked ~ #open3,
+#open-input4:checked ~ #open4,
+#open-input5:checked ~ #open5
+{
+    z-index: -1 !important;
+}
+input{
+    display: none;
+}
+
+
+#open-input1 ~ p,
+#open-input2 ~ p,
+#open-input3 ~ p,
+#open-input4 ~ p,
+#open-input5 ~ p
+{
+    display: block;
+    padding-top: 20px;
+}
+#open-input1:checked ~ p,
+#open-input2:checked ~ p,
+#open-input3:checked ~ p,
+#open-input4:checked ~ p,
+#open-input5:checked ~ p
+{
+    display: none;
+}
+
+label{
+    transition: .1s linear;
+}
+label:hover{
+    transform: scale(1.1);
+}
+.ques-img-left,
+.ques-img-right{
+    opacity: 0;
+}
+
+#open-input1 ~ .ques-img-left,
+#open-input2 ~ .ques-img-left,
+#open-input3 ~ .ques-img-left,
+#open-input4 ~ .ques-img-left,
+#open-input5 ~ .ques-img-left,
+#open-input1 ~ .ques-img-right,
+#open-input2 ~ .ques-img-right,
+#open-input3 ~ .ques-img-right,
+#open-input4 ~ .ques-img-right,
+#open-input5 ~ .ques-img-right
+{
+    opacity: 0.2;
+}
+#open-input1:checked ~ .ques-img-left,
+#open-input2:checked ~ .ques-img-left,
+#open-input3:checked ~ .ques-img-left,
+#open-input4:checked ~ .ques-img-left,
+#open-input5:checked ~ .ques-img-left,
+#open-input1:checked ~ .ques-img-right,
+#open-input2:checked ~ .ques-img-right,
+#open-input3:checked ~ .ques-img-right,
+#open-input4:checked ~ .ques-img-right,
+#open-input5:checked ~ .ques-img-right
+{
+    opacity: 0;
+}
+
+@media screen and ( max-width : 675px ) {
+    .wrap-ques{
+        width: calc( 100% - 100px );
+    }
+}
